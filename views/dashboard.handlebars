@@ -1,0 +1,42 @@
+
+<h6>Welcome {{user_name}}</h6>
+{{#if blogs.length}}
+
+<section class="dashboad">
+    <h2>Your Posts</h2>
+    {{#each blogs as |blog|}}
+<div class="card">
+    <div class="card-header"> 
+        <div><a href="/api/blogs/{{id}}">{{blog_name}}</a><br>{{comments.length}} comment/comments</div>
+    </div>
+</div>
+    {{/each}}
+
+</section>
+     {{else}}
+          <h2>You has not posted anything yet</h2>
+{{/if}}
+
+   <div class="row">
+<div class="text-center mx-auto col-lg-10 col-md-8 col-sm-7">
+
+        
+    <form class="new-post-form">
+      <div>
+        <label for="post-title">Blog Name</label>
+        <input type="text" id="post-title" name="post-title" />
+      </div>
+     
+      <div>
+        <label for="post-text">What's on your thought?</label>
+        <textarea id="post-text" name="post-text"></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark mt-3">Create a post!</button>
+    </form>
+
+    </div>
+</div>
+</div>
+
+    
+<script src="/js/createPost.js"></script>

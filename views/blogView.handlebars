@@ -1,0 +1,60 @@
+{{#if logged_in}}
+<h6>Welcome {{user_name}}</h6>
+<br></br>
+<div class="container">
+   <article class="post">
+    <div class="whole-post">
+        <div class="info-section">
+            <div class="post-name">
+              <span><a href="/api/blogs/{{id}}">{{blog_name}}</a></span>
+            </div>
+            <div class="created-by">
+                <p id="comment-subtitle">
+                   Posted by <b>{{user.username}} </b> on <b>{{format_date date_created}}</b>
+                       
+                </p>
+            </div>
+        </div>
+        <div class="content-section">
+            <p>{{description}}</p>
+           
+        </div>
+    </div>
+</article>
+             {{#if (is_my_page user.id user_id)}}
+            
+                <div class ="buttonsBlog">
+                <button type="button" class="btn btn-primary btn-lg"id="editBtn">Edit Blog</button>
+                <br></br>
+                <button type="button" class="btn btn-secondary btn-lg"id="deleteBtn">Delete</button>
+                <br></br>
+                </div>
+             {{/if}}
+            <div class="text-center">
+                <h3>Comments</h3>
+                {{#each comments as |comment| }}
+                    <div>
+                        <p>{{comment_description}} *** By *** {{comment.user.username}} on {{format_date comment.date_created}}</p>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+<div class="text-center mx-auto col-lg-10 col-md-8 col-sm-7">
+  <form id="comment-form">
+    <label for="comment-form"><strong>Have a thought? Submit one here..</strong></label>
+    <div class="form-group">
+      <textarea class="form-control" id="comment" rows="3"></textarea>
+      <div class="mt-2">
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+<script src="/js/blogManagement.js"></script>
+<script src="/js/commentPost.js"></script>
+{{/if}}

@@ -1,0 +1,39 @@
+
+
+[
+	{
+		"blog_id": 1,
+		"comment_description": "ghe vay ha",
+		"user_id": 2
+	},
+    {
+		"blog_id": 2,
+		"comment_description": "con chim canh cut cuoi cung bi gi",
+		"user_id": 2
+	},
+    {
+		"blog_id": 3,
+		"comment_description": "chan qua di ah",
+		"user_id": 3
+	},
+    {
+		"blog_id": 4,
+		"comment_description": "troi con heo bi ia chay ha??",
+		"user_id": 2
+	},
+    {
+		"blog_id": 3,
+		"comment_description": "cai con cay dien",
+		"user_id": 4
+	},
+    {
+		"blog_id": 2,
+		"comment_description": "troi oi la troi",
+		"user_id": 1
+	},
+	{
+		"blog_id": 5,
+		"comment_description": "hay qua di ah",
+		"user_id": 3
+	}
+]
