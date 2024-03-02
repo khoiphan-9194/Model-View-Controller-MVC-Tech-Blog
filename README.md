@@ -142,6 +142,8 @@ This application is powered by Node.js (v16.19.1), Express.js (v.14.18.2), JavaS
 ## Usage
 
 
+* In order to run the application, click on the [Heroku-MVC-Tech-Blog](https://blog-tech-4ecff840e9a7.herokuapp.com/)
+The following animation demonstrates the application functionality:
 
 ## License
 [![License: MIT](https://img.shields.io/badge/license-MIT-red)](https://opensource.org/licenses/MIT)
