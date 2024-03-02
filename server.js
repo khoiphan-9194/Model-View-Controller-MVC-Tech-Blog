@@ -43,6 +43,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
+app.set
 
 // Syncs sequelize with database
 sequelize.sync({ force: false }).then(() => {
